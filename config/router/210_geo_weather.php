@@ -1,7 +1,9 @@
 <?php
+
 /**
  * A controller class.
  */
+
 return [
     "routes" => [
         [

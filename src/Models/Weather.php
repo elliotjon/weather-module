@@ -1,4 +1,5 @@
 <?php
+
 namespace Anax\Models;
 
 use Anax\Config\access;
@@ -18,7 +19,7 @@ class Weather
     /**
     * Curl from url
     */
-    
+
     public function curl($url)
     {
         $curl = curl_init($url);

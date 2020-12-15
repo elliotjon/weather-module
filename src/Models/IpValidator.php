@@ -1,11 +1,10 @@
 <?php
-
-namespace Anax\Models;
-
 /**
  * Class IpValidator
  * Validate ip and return result.
 */
+
+namespace Anax\Models;
 
 use Anax\Config\access;
 
@@ -84,5 +83,4 @@ class IpValidator
 
         return $ipAdress;
     }
-
 }

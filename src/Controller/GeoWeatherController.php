@@ -13,6 +13,7 @@ use Anax\Commons\ContainerInjectableTrait;
 class GeoWeatherController implements ContainerInjectableInterface
 {
     use ContainerInjectableTrait;
+
     private $darksky;
     private $ipValidator;
 
@@ -36,7 +37,7 @@ class GeoWeatherController implements ContainerInjectableInterface
         $page->add("anax/weather/header", $data);
         $page->add("anax/weather/index", $data);
         $page->add("anax/weather/footer", $data);
-    
+
         return $page->render([
             "title" => $title,
         ]);
@@ -58,7 +59,7 @@ class GeoWeatherController implements ContainerInjectableInterface
             $lat = $data["stack"]->{"latitude"};
             $long = $data["stack"]->{"longitude"};
             $weatherData = $this->darksky->getWeather($lat, $long, $config);
-            
+
             $exists = true;
         } else {
             $splitLocation = explode(",", $location);
@@ -109,7 +110,7 @@ class GeoWeatherController implements ContainerInjectableInterface
      *
      * @return object
      */
-    public function jsonAction() : object
+    public function jsonAction(): object
     {
         $title = "Weather forecast in JSON";
         $request = $this->di->get("request");
@@ -147,7 +148,7 @@ class GeoWeatherController implements ContainerInjectableInterface
             $lat = $data["stack"]->{"latitude"};
             $long = $data["stack"]->{"longitude"};
             $weatherData = $this->darksky->getWeather($lat, $long, $config);
-            
+
             $exists = true;
         } else {
             $splitLocation = explode(",", $location);
