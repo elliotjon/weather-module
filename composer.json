@@ -1,0 +1,34 @@
+{
+  "name": "elliotjon/weather-module",
+  "description": "Module for weather.",
+  "license": "MIT",
+  "minimum-stability": "beta",
+  "prefer-stable": true,
+  "authors": [
+    {
+        "name": "Elliot Nordin",
+        "email": "elnr17@student.bth.se",
+        "role": "Developer"
+    }
+],
+  "autoload": {
+      "psr-4": {
+          "Anax\\": "src/",
+          "Elnr17\\": "src/"
+      }
+  },
+  "require": {
+      "anax/anax-ramverk1-me": "^1.0.0",
+      "anax/anax-cli": "^1.2",
+      "anax/di": "^2.0"
+  },
+  "require-dev": {
+      "phpmetrics/phpmetrics": "^2",
+      "phpunit/phpunit": "^7",
+      "anax/anax-lite": "^1.0.24",
+      "anax/page": "^2.0.0-beta.1",
+      "anax/view": "^2.0.2",
+      "anax/url": "^2.0.0-alpha.1",
+      "anax/cache": "^2.0.0-beta.5"
+  }
+}
