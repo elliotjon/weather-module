@@ -1,13 +1,11 @@
 <?php
-
 namespace Anax\Models;
 
-/**
- * Class IpValidator
- * Validate ip and return result.
-*/
 use Anax\Config\access;
 
+/**
+ * Class Weather
+*/
 class Weather
 {
     private $keys;
