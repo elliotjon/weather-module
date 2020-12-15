@@ -135,8 +135,6 @@ class GeoWeatherController implements ContainerInjectableInterface
      */
     public function jsonActionPOST()
     {
-        $title = "Weather forecast";
-        $page = $this->di->get("page");
         $request = $this->di->get("request");
         $location = $request->getPost("geo");
         $config = $request->getPost("weather");

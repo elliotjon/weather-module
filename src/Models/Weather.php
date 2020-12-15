@@ -38,7 +38,6 @@ class Weather
 
         $mh = curl_multi_init();
 
-        $count = count($urls);
         foreach ($urls as $url) {
             $ch = curl_init("$url");
             curl_setopt_array($ch, $opts);
