@@ -1,9 +1,11 @@
 <?php
-namespace Anax\View;
 
 /**
- * Render content within an article.
- */
+* Render content within an article.
+*/
+
+namespace Anax\View;
+
 
 // Show incoming variables and view helper functions
 //echo showEnvironment(get_defined_vars(), get_defined_functions());

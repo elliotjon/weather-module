@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Class IpValidator
  * Validate ip and return result.
@@ -39,7 +40,6 @@ class IpValidator
         $stackUrl = 'http://api.ipstack.com/' . $ipAdress . '?access_key=' . $accessToken . '';
 
         $host = "";
-        $geo = "";
         $stack = "";
         $type = "";
         $valid = "";

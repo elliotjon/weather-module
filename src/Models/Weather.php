@@ -67,6 +67,7 @@ class Weather
 
     public function getWeather($lat, $long, $geo)
     {
+        $urls;
         $accessToken = $this->keys["darkSky"];
 
         if ($geo == "future") {

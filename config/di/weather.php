@@ -1,7 +1,9 @@
 <?php
+
 /**
  * Configuration file for DI Weather
  */
+
 return [
     // Services to add to the container.
     "services" => [

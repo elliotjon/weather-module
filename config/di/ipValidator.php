@@ -1,7 +1,9 @@
 <?php
+
 /**
  * Configuration file for DI IpValidator
  */
+
 return [
     // Services to add to the container.
     "services" => [
