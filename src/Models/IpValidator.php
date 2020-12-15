@@ -1,4 +1,5 @@
 <?php
+
 namespace Anax\Models;
 
 /**
@@ -83,4 +84,5 @@ class IpValidator
 
         return $ipAdress;
     }
+
 }
