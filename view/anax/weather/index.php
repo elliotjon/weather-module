@@ -16,8 +16,8 @@ if (isset($class)) {
     $classes[] = $class;
 }
 
-
 ?>
+
 <article <?= classList($classes) ?>>
 <p>In this page you can enter a location and get the weather forecast. The location can be a geographical position or an ip-adress.</p>
 

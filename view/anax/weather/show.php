@@ -16,8 +16,8 @@ if (isset($class)) {
     $classes[] = $class;
 }
 
-
 ?>
+
 <article <?= classList($classes) ?>>
 <form method="post">
 
