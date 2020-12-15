@@ -5,6 +5,7 @@ namespace Anax\Models;
  * Class IpValidator
  * Validate ip and return result.
 */
+
 use Anax\Config\access;
 
 class IpValidator
@@ -15,10 +16,10 @@ class IpValidator
     {
         $this->keys = $config;
     }
+
     /**
      * Curl from url
      */
-    
     public function curl($url)
     {
           $curl = curl_init($url);
@@ -42,7 +43,6 @@ class IpValidator
         $stack = "";
         $type = "";
         $valid = "";
-        
 
         if (filter_var($ipAdress, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
             $host = gethostbyaddr($ipAdress);

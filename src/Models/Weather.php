@@ -1,4 +1,5 @@
 <?php
+
 namespace Anax\Models;
 
 /**
@@ -17,17 +18,17 @@ class Weather
     }
 
     /**
-     * Curl from url
-     */
+    * Curl from url
+    */
     
     public function curl($url)
     {
-          $curl = curl_init($url);
-          curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-          $data = curl_exec($curl);
-          curl_close($curl);
+        $curl = curl_init($url);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        $data = curl_exec($curl);
+        curl_close($curl);
 
-          return $data;
+        return $data;
     }
 
     public function multiCurl($urls)
@@ -46,12 +47,12 @@ class Weather
             curl_multi_add_handle($mh, $ch);
             $cAll[] = $ch;
         }
-   
+
         $running = null;
         do {
             curl_multi_exec($mh, $running);
         } while ($running);
-       
+
         foreach ($cAll as $ch) {
             curl_multi_remove_handle($mh, $ch);
         }
@@ -62,7 +63,7 @@ class Weather
             $data = curl_multi_getcontent($ch);
             array_push($response, $data);
         }
-    
+
         return $response;
     }
 
