@@ -5,3 +5,7 @@ Revision history
 v1.0.0 (2020-12-15)
 ---------------------------------
 * First version
+
+v1.0.1 (2020-12-16)
+---------------------------------
+* Updated with working tests
