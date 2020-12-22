@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/elliotjon/weather-module.svg?branch=master)](https://travis-ci.org/elliotjon/weather-module)
+
 # Weather Module
 This module is a part of course 'Webbaserade ramverk 1' at Blekinge Institute of Technology. The Weather Module  is a package for framework Anax.
 

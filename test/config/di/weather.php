@@ -15,7 +15,7 @@ return [
                 // Load the configuration files
                 $cfg = $this->get("configuration");
                 $config = $cfg->load("access.php");
-                $weatherModel->setKeys($config['config']);
+                $weatherModel->setKeys($config["config"]);
                 return $weatherModel;
             }
         ],
