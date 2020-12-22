@@ -30,9 +30,10 @@ class GeoWeatherControllerTest extends TestCase
         $this->di->loadServices(ANAX_INSTALL_PATH . "/test/config/di");
 
         $this->di->get("cache")->setPath(ANAX_INSTALL_PATH . "/test/cache");
-
+        $this->di->setShared("apiWeather", "\Anax\Models\WeatherMock");
+        $this->di->setShared("apiIpValidator", "\Anax\Models\IpMock");
         $di = $this->di;
-
+        
         // intitialie the controller
         $this->controller = new GeoWeatherController();
         $this->controller->setDI($this->di);
@@ -51,7 +52,6 @@ class GeoWeatherControllerTest extends TestCase
     {
         $_POST["geo"] = "8.8.4.4";
         $_POST["weather"] = "future";
-
         $res = $this->controller->indexActionPost();
         $body = $res->getBody();
 
@@ -71,7 +71,7 @@ class GeoWeatherControllerTest extends TestCase
         $body = $res->getBody();
         $exp = "This is the <b>past</b> weather forecast for:";
         $this->assertContains($exp, $body);
-        $exp = "America/Chicago";
+        $exp = "America/Los_Angeles";
         $this->assertContains($exp, $body);
     }
 
@@ -83,7 +83,7 @@ class GeoWeatherControllerTest extends TestCase
         $body = $res->getBody();
         $exp = "Weather forecast";
         $this->assertContains($exp, $body);
-        $exp = "Europe/Budapest";
+        $exp = "America/Los_Angeles";
         $this->assertContains($exp, $body);
     }
     public function testIndexActionPostInvalidAmountCoordinates()
